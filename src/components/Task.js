@@ -6,13 +6,14 @@ const Task = ({ task, toggleFinished, deleteTask }) => {
 
 
     return (
-        <div>
+        <div class = "tasks">
             {/*<button onClick={toggleFinished}>{label}</button>*/}
-            <input type="checkbox" id="myCheck" onclick="myFunction()"></input>
+            <input type="checkbox" id="myCheck" onClick="myFunction()"></input>
             {task.content}
             <button onClick={deleteTask}>x</button>
         </div>
     );
 };
+
 
 export default Task;

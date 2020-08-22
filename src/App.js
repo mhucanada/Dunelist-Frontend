@@ -91,6 +91,7 @@ const App = () => {
     var date = new Date();
     var displayDate = date.toDateString();
 
+
 	return (
 		<div>
 			<h2>Task List for {displayDate}</h2>
@@ -105,8 +106,8 @@ const App = () => {
 				))}
 			</div>
 			<form onSubmit={addTask}>
-				<input value={newTask} onChange={handleTaskChange} />
-				<input type='text' value={newCategory} onChange={handleCategoryChange} list='cats' />
+				<input value={newTask} onChange={handleTaskChange} placeholder=" Task" />
+				<input type='text' value={newCategory} onChange={handleCategoryChange} placeholder=" Category" list='cats' />
 				<datalist id='cats'>
 					{currentCategories.map((category, i) => (
 						<Dropdown key={i} category={category.category} />
@@ -114,9 +115,31 @@ const App = () => {
 				</datalist>
 				<button type='submit'>save</button>
 			</form>
-			<div></div>
+			<div class="right-side"> </div>
+        <div id="myProgress"><div id="myBar"></div></div>
+            
 		</div>
 	)
+/*
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+*/
 }
 
 export default App

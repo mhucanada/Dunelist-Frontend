@@ -1,77 +1,33 @@
 {
   "tasks": [
     {
-      "content": "task1",
-      "id": 0.4472561127816401,
-      "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 15:42:13 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "task2",
-      "id": 0.9214325971869426,
-      "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 15:42:17 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "assignment1",
-      "id": 0.7130113256185266,
+      "content": "Do math homework",
+      "id": 0.6805766174741372,
       "status": false,
       "category": "school",
-      "date": "Sat Aug 22 2020 15:42:27 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asfas",
-      "id": 0.3615918108933114,
-      "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 15:43:57 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasdf",
-      "id": 0.5885622115976987,
-      "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 15:45:55 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasdf",
-      "id": 0.8172696730681455,
-      "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 15:46:12 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "sadfasf",
-      "id": 0.25539577396814517,
-      "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 15:47:55 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asfasdf",
-      "id": 0.37289073128563577,
-      "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 15:48:27 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasdf",
-      "id": 0.3306187444052131,
-      "status": false,
-      "category": "uncategorized",
-      "date": "Sat Aug 22 2020 15:49:11 GMT-0400 (Eastern Daylight Time)"
+      "date": "Sat Aug 22 2020 17:39:34 GMT-0400 (Eastern Daylight Time)"
     }
   ],
   "categories": [
     {
-      "category": "work",
-      "id": "work"
+      "category": "Work",
+      "id": "Work"
     },
     {
-      "category": "school",
-      "id": "school"
+      "category": "School",
+      "id": "School"
+    },
+    {
+      "category": "Personal",
+      "id": "Personal"
+    },
+    {
+      "category": "Health",
+      "id": "Heath"
+    },
+    {
+      "category": "Social",
+      "id": "Social"
     }
   ]
 }
