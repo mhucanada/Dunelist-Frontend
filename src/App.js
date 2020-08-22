@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import Task from './components/Task'
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([])
+  const [newTask, setNewTask] = useState('')
+
+  useEffect(() => {
+    console.log('effect')
+    axios
+    .get('http://localhost:3001/tasks')
+    .then(response => {
+      console.log('promise fulfilled')
+      setTasks(response.data)
+      console.log(response.data)
+    })
+  }, [])
+
+  const addTask = (event) => {
+    event.preventDefault()
+
+    
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Task List</h2>
+      <ul>
+        {tasks.map((task, i) => 
+          <Task key={i} task={task} />
+          )}
+      </ul>
     </div>
   );
-}
+};
 
 export default App;
