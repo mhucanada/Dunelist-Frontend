@@ -36,13 +36,13 @@ const App = () => {
 			date: Date(),
 		}
 
-		const existingCategories = currentCategories.includes(category)
+		const existingCategories = currentCategories.find(category => category.id === category)
 		console.log(existingCategories)
 
-		if (!existingCategories) {
+		if (existingCategories !== undefined) {
 			categoryService.create({
         category: category,
-        id: Math.random(1000000000)
+        id: category
       }).then((returnedCategory) => {
         console.log(returnedCategory)
         //setCurrentCategories(currentCategories.concat(returnedCategory))

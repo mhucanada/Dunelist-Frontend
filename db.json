@@ -1,104 +1,70 @@
 {
   "tasks": [
     {
-      "content": "assignment 1",
-      "id": 0.7711150863018463,
+      "content": "task1",
+      "id": 0.4472561127816401,
+      "status": false,
+      "category": "work",
+      "date": "Sat Aug 22 2020 15:42:13 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "task2",
+      "id": 0.9214325971869426,
+      "status": false,
+      "category": "work",
+      "date": "Sat Aug 22 2020 15:42:17 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "assignment1",
+      "id": 0.7130113256185266,
       "status": false,
       "category": "school",
-      "date": "Sat Aug 22 2020 14:53:38 GMT-0400 (Eastern Daylight Time)"
+      "date": "Sat Aug 22 2020 15:42:27 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "assignment 2",
-      "id": 0.2212084852387617,
-      "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 14:53:46 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "task 1",
-      "id": 0.12597964588826116,
+      "content": "asfas",
+      "id": 0.3615918108933114,
       "status": false,
       "category": "work",
-      "date": "Sat Aug 22 2020 14:53:52 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "task 2",
-      "id": 0.9906687613062566,
-      "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 14:53:56 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "yoga",
-      "id": 0.37706789251330863,
-      "status": false,
-      "category": "lifestyle",
-      "date": "Sat Aug 22 2020 14:54:03 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "meditation",
-      "id": 0.7629774055853928,
-      "status": false,
-      "category": "lifestyle",
-      "date": "Sat Aug 22 2020 14:54:09 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasfsdaf",
-      "id": 0.8892561158662766,
-      "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 15:18:33 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "sadfsadfsadfsa",
-      "id": 0.5747745693789597,
-      "status": false,
-      "category": "sadness",
-      "date": "Sat Aug 22 2020 15:19:34 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asfsdfsad",
-      "id": 0.13819023459272484,
-      "status": false,
-      "category": "sadness",
-      "date": "Sat Aug 22 2020 15:21:28 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasfas",
-      "id": 0.9468958037781647,
-      "status": false,
-      "category": "asdfsaf",
-      "date": "Sat Aug 22 2020 15:21:40 GMT-0400 (Eastern Daylight Time)"
+      "date": "Sat Aug 22 2020 15:43:57 GMT-0400 (Eastern Daylight Time)"
     },
     {
       "content": "asdfasdf",
-      "id": 0.3169753174586356,
+      "id": 0.5885622115976987,
       "status": false,
-      "category": "234234",
-      "date": "Sat Aug 22 2020 15:27:31 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asfsd",
-      "id": 0.5201547263778858,
-      "status": false,
-      "category": "1",
-      "date": "Sat Aug 22 2020 15:27:58 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asfasfasd",
-      "id": 0.022108052764374442,
-      "status": false,
-      "category": "123",
-      "date": "Sat Aug 22 2020 15:30:10 GMT-0400 (Eastern Daylight Time)"
+      "category": "school",
+      "date": "Sat Aug 22 2020 15:45:55 GMT-0400 (Eastern Daylight Time)"
     },
     {
       "content": "asdfasdf",
-      "id": 0.7874994046198442,
+      "id": 0.8172696730681455,
       "status": false,
-      "category": "123",
-      "date": "Sat Aug 22 2020 15:40:06 GMT-0400 (Eastern Daylight Time)"
+      "category": "school",
+      "date": "Sat Aug 22 2020 15:46:12 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "sadfasf",
+      "id": 0.25539577396814517,
+      "status": false,
+      "category": "school",
+      "date": "Sat Aug 22 2020 15:47:55 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asfasdf",
+      "id": 0.37289073128563577,
+      "status": false,
+      "category": "school",
+      "date": "Sat Aug 22 2020 15:48:27 GMT-0400 (Eastern Daylight Time)"
     }
   ],
   "categories": [
+    {
+      "category": "work",
+      "id": "work"
+    },
+    {
+      "category": "school",
+      "id": "school"
+    }
   ]
 }
