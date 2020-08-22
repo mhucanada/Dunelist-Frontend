@@ -1,38 +1,68 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
 import Task from './components/Task'
+import taskService from './services/tasks'
 
 const App = () => {
-  const [tasks, setTasks] = useState([])
-  const [newTask, setNewTask] = useState('')
+	const [tasks, setTasks] = useState([])
+	const [newTask, setNewTask] = useState('')
 
-  useEffect(() => {
-    console.log('effect')
-    axios
-    .get('http://localhost:3001/tasks')
-    .then(response => {
-      console.log('promise fulfilled')
-      setTasks(response.data)
-      console.log(response.data)
+	useEffect(() => {
+		console.log('effect')
+		taskService.getAll().then((initialTasks) => {
+			setTasks(initialTasks)
+		})
+	}, [])
+
+	const addTask = (event) => {
+		event.preventDefault()
+
+		const taskObject = {
+			content: newTask,
+      id: Math.random(10000000),
+      status: false
+		}
+
+		if (!newTask.replace(/\s/g, '').length) {
+      alert("bruh this is empty or just whitespace")
+      setNewTask('')
+		} else {
+			taskService.create(taskObject).then((returnedTask) => {
+				setTasks(tasks.concat(returnedTask))
+				setNewTask('')
+			})
+		}
+	}
+
+	const handleTaskChange = (event) => {
+		console.log(event.target.value)
+		setNewTask(event.target.value)
+  }
+  
+  const toggleFinished = (id) => {
+    const task = tasks.find(n => n.id === id)
+
+    const changedTask = { ...task, status: !task.status }
+
+    taskService
+    .update(id, changedTask)
+    .then(returnedTask => {
+      setTasks(tasks.map(task => task.id !==id ? task : returnedTask))
     })
-  }, [])
-
-  const addTask = (event) => {
-    event.preventDefault()
-
-    
   }
 
-  return (
-    <div>
-      <h2>Task List</h2>
-      <ul>
-        {tasks.map((task, i) => 
-          <Task key={i} task={task} />
-          )}
-      </ul>
-    </div>
-  );
-};
+	return (
+		<div>
+			<h2>Task List</h2>
+			<ul>
+				{tasks.map((task, i) => (
+					<Task key={i} task={task} toggleFinished={() => toggleFinished(task.id)}/>
+				))}
+			</ul>
+			<form onSubmit={addTask}>
+				<input value={newTask} onChange={handleTaskChange} />
+			</form>
+		</div>
+	)
+}
 
-export default App;
+export default App
