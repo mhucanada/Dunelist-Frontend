@@ -21,34 +21,31 @@ const App = () => {
 		console.log('categories')
 		categoryService.getAll().then((categories) => {
 			setCurrentCategories(categories)
+			console.log(categories)
 		})
 	}, [])
 
 	const addTask = (event) => {
 		event.preventDefault()
-		const category = !newCategory.replace(/\s/g, '').length === true ? 'uncategorized' : newCategory
+		const oneCategory = !newCategory.replace(/\s/g, '').length === true ? 'uncategorized' : newCategory
 
 		const taskObject = {
 			content: newTask,
 			id: Math.random(10000000),
 			status: false,
-			category: category,
+			category: oneCategory,
 			date: Date(),
-        
 		}
 
-		const existingCategories = currentCategories.find(category => category.id === category)
+		const existingCategories = currentCategories.find((result) => result.category === newCategory)
 		console.log(existingCategories)
 
-		if (existingCategories !== undefined) {
-			categoryService.create({
-        category: category,
-        id: category
-      }).then((returnedCategory) => {
-        console.log(returnedCategory)
-        //setCurrentCategories(currentCategories.concat(returnedCategory))
+		if (existingCategories === undefined && oneCategory !== "uncategorized") {
+			categoryService.create({ category: oneCategory }).then((returnedCategory) => {
+				console.log(returnedCategory)
+				setCurrentCategories(currentCategories.concat(returnedCategory))
 			})
-		} 
+		}
 
 		if (!newTask.replace(/\s/g, '').length) {
 			alert('Please enter valid text.')
@@ -87,9 +84,9 @@ const App = () => {
 			setTasks(tasks.filter((task) => task.id !== id))
 		}
 	}
-    
-    var date = new Date();
-    var displayDate = date.toDateString();
+
+	var date = new Date()
+	var displayDate = date.toDateString()
 
 	return (
 		<div>
