@@ -5,13 +5,16 @@ const Task = ({ task, toggleFinished, deleteTask }) => {
     ? 'finished' : 'not finished'
  */
     return (
-        <div>
+        <div class = "tasks">
             {/*<button onClick={toggleFinished}>{label}</button>*/}
+
             <input type="checkbox" id="myCheck" onClick={toggleFinished}></input>
+
             {task.content}
             <button onClick={deleteTask}>x</button>
         </div>
     );
 };
+
 
 export default Task;
