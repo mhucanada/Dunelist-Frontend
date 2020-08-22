@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Task from './components/Task'
+import Dropdown from './components/Dropdown'
 import taskService from './services/tasks'
 import categoryService from './services/category'
 
@@ -34,16 +35,19 @@ const App = () => {
 			category: category,
 			date: Date(),
 		}
-/* 
+
 		const existingCategories = currentCategories.includes(category)
 		console.log(existingCategories)
 
 		if (!existingCategories) {
-			categoryService.create(category).then((returnedCategory) => {
+			categoryService.create({
+        category: category,
+        id: Math.random(1000000000)
+      }).then((returnedCategory) => {
         console.log(returnedCategory)
-        setCurrentCategories(currentCategories.concat(returnedCategory))
+        //setCurrentCategories(currentCategories.concat(returnedCategory))
 			})
-		} */
+		} 
 
 		if (!newTask.replace(/\s/g, '').length) {
 			alert('bruh this is empty or just whitespace')
@@ -98,9 +102,15 @@ const App = () => {
 			</div>
 			<form onSubmit={addTask}>
 				<input value={newTask} onChange={handleTaskChange} />
-				<input value={newCategory} onChange={handleCategoryChange} />
+				<input type='text' value={newCategory} onChange={handleCategoryChange} list='cats' />
+				<datalist id='cats'>
+					{currentCategories.map((category, i) => (
+						<Dropdown key={i} category={category.category} />
+					))}
+				</datalist>
 				<button type='submit'>save</button>
 			</form>
+			<div></div>
 		</div>
 	)
 }

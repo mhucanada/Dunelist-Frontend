@@ -1,56 +1,104 @@
 {
   "tasks": [
     {
-      "content": "bruh",
-      "id": 0.6962547941517543,
-      "status": true,
-      "category": ".jpg"
-    },
-    {
-      "content": "asdf",
-      "id": 0.8016477581149648,
-      "status": true,
-      "category": "uncategorized"
-    },
-    {
-      "content": "asdfaf",
-      "id": 0.6734636205074562,
-      "status": true,
-      "category": "uncategorized",
-      "date": "Sat Aug 22 2020 14:14:23 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasfd",
-      "id": 0.9528956005969618,
+      "content": "assignment 1",
+      "id": 0.7711150863018463,
       "status": false,
-      "category": "uncategorized",
-      "date": "Sat Aug 22 2020 14:18:25 GMT-0400 (Eastern Daylight Time)"
+      "category": "school",
+      "date": "Sat Aug 22 2020 14:53:38 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "assignment 2",
+      "id": 0.2212084852387617,
+      "status": false,
+      "category": "school",
+      "date": "Sat Aug 22 2020 14:53:46 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "task 1",
+      "id": 0.12597964588826116,
+      "status": false,
+      "category": "work",
+      "date": "Sat Aug 22 2020 14:53:52 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "task 2",
+      "id": 0.9906687613062566,
+      "status": false,
+      "category": "work",
+      "date": "Sat Aug 22 2020 14:53:56 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "yoga",
+      "id": 0.37706789251330863,
+      "status": false,
+      "category": "lifestyle",
+      "date": "Sat Aug 22 2020 14:54:03 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "meditation",
+      "id": 0.7629774055853928,
+      "status": false,
+      "category": "lifestyle",
+      "date": "Sat Aug 22 2020 14:54:09 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asdfasfsdaf",
+      "id": 0.8892561158662766,
+      "status": false,
+      "category": "work",
+      "date": "Sat Aug 22 2020 15:18:33 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "sadfsadfsadfsa",
+      "id": 0.5747745693789597,
+      "status": false,
+      "category": "sadness",
+      "date": "Sat Aug 22 2020 15:19:34 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asfsdfsad",
+      "id": 0.13819023459272484,
+      "status": false,
+      "category": "sadness",
+      "date": "Sat Aug 22 2020 15:21:28 GMT-0400 (Eastern Daylight Time)"
     },
     {
       "content": "asdfasfas",
-      "id": 0.5012516584418172,
+      "id": 0.9468958037781647,
       "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 14:46:52 GMT-0400 (Eastern Daylight Time)"
+      "category": "asdfsaf",
+      "date": "Sat Aug 22 2020 15:21:40 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "asdfasfasdas",
-      "id": 0.9634668268784328,
+      "content": "asdfasdf",
+      "id": 0.3169753174586356,
       "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 14:47:01 GMT-0400 (Eastern Daylight Time)"
+      "category": "234234",
+      "date": "Sat Aug 22 2020 15:27:31 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "asdfasfsad",
-      "id": 0.24478848375666318,
+      "content": "asfsd",
+      "id": 0.5201547263778858,
       "status": false,
-      "category": "work",
-      "date": "Sat Aug 22 2020 14:47:39 GMT-0400 (Eastern Daylight Time)"
+      "category": "1",
+      "date": "Sat Aug 22 2020 15:27:58 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asfasfasd",
+      "id": 0.022108052764374442,
+      "status": false,
+      "category": "123",
+      "date": "Sat Aug 22 2020 15:30:10 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asdfasdf",
+      "id": 0.7874994046198442,
+      "status": false,
+      "category": "123",
+      "date": "Sat Aug 22 2020 15:40:06 GMT-0400 (Eastern Daylight Time)"
     }
   ],
   "categories": [
-    "School",
-    "Work",
-    "Lifestyle"
   ]
 }

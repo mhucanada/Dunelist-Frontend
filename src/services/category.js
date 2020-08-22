@@ -6,8 +6,10 @@ const getAll = () => {
 	return request.then((response) => response.data)
 }
 
-const create = newElement => {
-	const request = axios.post(baseUrl, newElement)
+const create = (newElement) => {
+
+    const request = axios.post(baseUrl, newElement)
+    console.log(request.then((response) => response.data))
 	return request.then((response) => response.data)
 }
 
