@@ -27,37 +27,30 @@
       "date": "Sat Aug 22 2020 14:18:25 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "asdfasfasdf",
-      "id": 0.8048112006360177,
+      "content": "asdfasfas",
+      "id": 0.5012516584418172,
       "status": false,
       "category": "school",
-      "date": "Sat Aug 22 2020 14:21:03 GMT-0400 (Eastern Daylight Time)"
+      "date": "Sat Aug 22 2020 14:46:52 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "asdfasdf",
-      "id": 0.67822584914992,
+      "content": "asdfasfasdas",
+      "id": 0.9634668268784328,
       "status": false,
-      "category": "school",
-      "date": "Sat Aug 22 2020 14:29:08 GMT-0400 (Eastern Daylight Time)"
+      "category": "work",
+      "date": "Sat Aug 22 2020 14:47:01 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "asdfasdfasdf",
-      "id": 0.4965981229596985,
+      "content": "asdfasfsad",
+      "id": 0.24478848375666318,
       "status": false,
-      "category": "uncategorized",
-      "date": "Sat Aug 22 2020 14:29:14 GMT-0400 (Eastern Daylight Time)"
-    },
-    {
-      "content": "asdfasdf",
-      "id": 0.010859165812585614,
-      "status": false,
-      "category": "uncategorized",
-      "date": "Sat Aug 22 2020 14:29:44 GMT-0400 (Eastern Daylight Time)"
+      "category": "work",
+      "date": "Sat Aug 22 2020 14:47:39 GMT-0400 (Eastern Daylight Time)"
     }
   ],
   "categories": [
-    "uncategorized",
-    ".jpg",
-    "school"
+    "School",
+    "Work",
+    "Lifestyle"
   ]
 }

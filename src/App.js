@@ -6,8 +6,8 @@ import categoryService from './services/category'
 const App = () => {
 	const [tasks, setTasks] = useState([])
 	const [newTask, setNewTask] = useState('')
-  const [newCategory, setNewCategory] = useState('')
-  const [currentCategories, setCurrentCategories] = useState([])
+	const [newCategory, setNewCategory] = useState('')
+	const [currentCategories, setCurrentCategories] = useState([])
 
 	useEffect(() => {
 		console.log('effect')
@@ -34,13 +34,16 @@ const App = () => {
 			category: category,
 			date: Date(),
 		}
+/* 
+		const existingCategories = currentCategories.includes(category)
+		console.log(existingCategories)
 
-    const existingCategories = currentCategories.includes(category)
-    console.log(existingCategories)
-
-    if (!existingCategories) {
-      
-    }
+		if (!existingCategories) {
+			categoryService.create(category).then((returnedCategory) => {
+        console.log(returnedCategory)
+        setCurrentCategories(currentCategories.concat(returnedCategory))
+			})
+		} */
 
 		if (!newTask.replace(/\s/g, '').length) {
 			alert('bruh this is empty or just whitespace')
