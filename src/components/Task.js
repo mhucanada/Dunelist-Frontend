@@ -4,6 +4,7 @@ const Task = ({ task, toggleFinished, deleteTask }) => {
     const label = task.status
     ? 'finished' : 'not finished'
 
+
     return (
         <div>
             {task.content}
