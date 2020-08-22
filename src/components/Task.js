@@ -7,8 +7,9 @@ const Task = ({ task, toggleFinished, deleteTask }) => {
 
     return (
         <div>
+            {/*<button onClick={toggleFinished}>{label}</button>*/}
+            <input type="checkbox" id="myCheck" onclick="myFunction()"></input>
             {task.content}
-            <button onClick={toggleFinished}>{label}</button>
             <button onClick={deleteTask}>x</button>
         </div>
     );

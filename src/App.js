@@ -34,6 +34,7 @@ const App = () => {
 			status: false,
 			category: category,
 			date: Date(),
+        
 		}
 
 		const existingCategories = currentCategories.find(category => category.id === category)
@@ -50,7 +51,7 @@ const App = () => {
 		} 
 
 		if (!newTask.replace(/\s/g, '').length) {
-			alert('bruh this is empty or just whitespace')
+			alert('Please enter valid text.')
 			setNewTask('')
 		} else {
 			taskService.create(taskObject).then((returnedTask) => {
@@ -81,15 +82,18 @@ const App = () => {
 	}
 
 	const deleteTask = (id) => {
-		if (window.confirm('Do you really want to delete this note')) {
+		if (window.confirm('Are you sure you want to delete this?')) {
 			taskService.deleteTask(id)
 			setTasks(tasks.filter((task) => task.id !== id))
 		}
 	}
+    
+    var date = new Date();
+    var displayDate = date.toDateString();
 
 	return (
 		<div>
-			<h2>Task List</h2>
+			<h2>Task List for {displayDate}</h2>
 			<div>
 				{tasks.map((task, i) => (
 					<Task
