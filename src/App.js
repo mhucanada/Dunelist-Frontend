@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Task from './components/Task'
 import taskService from './services/tasks'
+import categoryService from './services/category'
 
 const App = () => {
 	const [tasks, setTasks] = useState([])
 	const [newTask, setNewTask] = useState('')
+  const [newCategory, setNewCategory] = useState('')
+  const [currentCategories, setCurrentCategories] = useState([])
 
 	useEffect(() => {
 		console.log('effect')
@@ -13,22 +16,40 @@ const App = () => {
 		})
 	}, [])
 
+	useEffect(() => {
+		console.log('categories')
+		categoryService.getAll().then((categories) => {
+			setCurrentCategories(categories)
+		})
+	}, [])
+
 	const addTask = (event) => {
 		event.preventDefault()
+		const category = !newCategory.replace(/\s/g, '').length === true ? 'uncategorized' : newCategory
 
 		const taskObject = {
 			content: newTask,
-      id: Math.random(10000000),
-      status: false
+			id: Math.random(10000000),
+			status: false,
+			category: category,
+			date: Date(),
 		}
 
+    const existingCategories = currentCategories.includes(category)
+    console.log(existingCategories)
+
+    if (!existingCategories) {
+      
+    }
+
 		if (!newTask.replace(/\s/g, '').length) {
-      alert("bruh this is empty or just whitespace")
-      setNewTask('')
+			alert('bruh this is empty or just whitespace')
+			setNewTask('')
 		} else {
 			taskService.create(taskObject).then((returnedTask) => {
 				setTasks(tasks.concat(returnedTask))
 				setNewTask('')
+				setNewCategory('')
 			})
 		}
 	}
@@ -36,30 +57,46 @@ const App = () => {
 	const handleTaskChange = (event) => {
 		console.log(event.target.value)
 		setNewTask(event.target.value)
-  }
-  
-  const toggleFinished = (id) => {
-    const task = tasks.find(n => n.id === id)
+	}
 
-    const changedTask = { ...task, status: !task.status }
+	const handleCategoryChange = (event) => {
+		setNewCategory(event.target.value)
+	}
 
-    taskService
-    .update(id, changedTask)
-    .then(returnedTask => {
-      setTasks(tasks.map(task => task.id !==id ? task : returnedTask))
-    })
-  }
+	const toggleFinished = (id) => {
+		const task = tasks.find((n) => n.id === id)
+
+		const changedTask = { ...task, status: !task.status }
+
+		taskService.update(id, changedTask).then((returnedTask) => {
+			setTasks(tasks.map((task) => (task.id !== id ? task : returnedTask)))
+		})
+	}
+
+	const deleteTask = (id) => {
+		if (window.confirm('Do you really want to delete this note')) {
+			taskService.deleteTask(id)
+			setTasks(tasks.filter((task) => task.id !== id))
+		}
+	}
 
 	return (
 		<div>
 			<h2>Task List</h2>
-			<ul>
+			<div>
 				{tasks.map((task, i) => (
-					<Task key={i} task={task} toggleFinished={() => toggleFinished(task.id)}/>
+					<Task
+						key={i}
+						task={task}
+						toggleFinished={() => toggleFinished(task.id)}
+						deleteTask={() => deleteTask(task.id)}
+					/>
 				))}
-			</ul>
+			</div>
 			<form onSubmit={addTask}>
 				<input value={newTask} onChange={handleTaskChange} />
+				<input value={newCategory} onChange={handleCategoryChange} />
+				<button type='submit'>save</button>
 			</form>
 		</div>
 	)

@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Task = ({ task, toggleFinished }) => {
+const Task = ({ task, toggleFinished, deleteTask }) => {
     const label = task.status
     ? 'finished' : 'not finished'
 
     return (
-        <li>
+        <div>
             {task.content}
             <button onClick={toggleFinished}>{label}</button>
-        </li>
+            <button onClick={deleteTask}>x</button>
+        </div>
     );
 };
 

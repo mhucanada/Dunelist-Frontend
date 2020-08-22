@@ -1,39 +1,63 @@
 {
   "tasks": [
     {
-      "content": "hello",
-      "id": 1,
-      "status": false
-    },
-    {
       "content": "bruh",
-      "id": 2,
-      "status": false
-    },
-    {
-      "content": "ajit",
-      "id": 3,
-      "status": true
+      "id": 0.6962547941517543,
+      "status": true,
+      "category": ".jpg"
     },
     {
       "content": "asdf",
-      "id": 0.6769826194052366,
-      "status": true
+      "id": 0.8016477581149648,
+      "status": true,
+      "category": "uncategorized"
     },
     {
-      "content": "asdf",
-      "id": 0.5060870108662363,
-      "status": false
+      "content": "asdfaf",
+      "id": 0.6734636205074562,
+      "status": true,
+      "category": "uncategorized",
+      "date": "Sat Aug 22 2020 14:14:23 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "awe",
-      "id": 0.5139855040041963,
-      "status": true
+      "content": "asdfasfd",
+      "id": 0.9528956005969618,
+      "status": false,
+      "category": "uncategorized",
+      "date": "Sat Aug 22 2020 14:18:25 GMT-0400 (Eastern Daylight Time)"
     },
     {
-      "content": "24",
-      "id": 0.3831070706240063,
-      "status": false
+      "content": "asdfasfasdf",
+      "id": 0.8048112006360177,
+      "status": false,
+      "category": "school",
+      "date": "Sat Aug 22 2020 14:21:03 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asdfasdf",
+      "id": 0.67822584914992,
+      "status": false,
+      "category": "school",
+      "date": "Sat Aug 22 2020 14:29:08 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asdfasdfasdf",
+      "id": 0.4965981229596985,
+      "status": false,
+      "category": "uncategorized",
+      "date": "Sat Aug 22 2020 14:29:14 GMT-0400 (Eastern Daylight Time)"
+    },
+    {
+      "content": "asdfasdf",
+      "id": 0.010859165812585614,
+      "status": false,
+      "category": "uncategorized",
+      "date": "Sat Aug 22 2020 14:29:44 GMT-0400 (Eastern Daylight Time)"
     }
+  ],
+  "categories": [
+    "uncategorized",
+    ".jpg",
+    "school"
   ]
 }
