@@ -131,10 +131,15 @@ const App = () => {
 				<input type="submit" value="Add" />
 				{/* <button type='submit'>save</button> */}
 			</form>
+
 			<div className="right-side">
+                
+                <p>Overall</p>
+                <div/>
                 
                 <ProgressBar numberOfTasks={tasks.length} tasksDone={tasksDone} />
             </div>
+
 		</div>
 			
 	)
