@@ -118,7 +118,7 @@ const App = () => {
 				<input type="submit" value="save" />
 				{/* <button type='submit'>save</button> */}
 			</form>
-			<div class='right-side'> </div>
+			<div className='right-side'> </div>
 			<div id='myProgress'>
 				<div id='myBar'></div>
 			</div>
