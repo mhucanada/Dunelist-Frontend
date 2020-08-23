@@ -40,7 +40,7 @@ const App = () => {
 		const existingCategories = currentCategories.find((result) => result.category === newCategory)
 		console.log(existingCategories)
 
-		if (existingCategories === undefined && oneCategory !== "uncategorized") {
+		if (existingCategories === undefined && oneCategory !== 'uncategorized') {
 			categoryService.create({ category: oneCategory }).then((returnedCategory) => {
 				console.log(returnedCategory)
 				setCurrentCategories(currentCategories.concat(returnedCategory))
@@ -88,7 +88,6 @@ const App = () => {
 	var date = new Date()
 	var displayDate = date.toDateString()
 
-
 	return (
 		<div>
 			<h2>Task List for {displayDate}</h2>
@@ -103,21 +102,29 @@ const App = () => {
 				))}
 			</div>
 			<form onSubmit={addTask}>
-				<input value={newTask} onChange={handleTaskChange} placeholder=" Task" />
-				<input type='text' value={newCategory} onChange={handleCategoryChange} placeholder=" Category" list='cats' />
+				<input value={newTask} onChange={handleTaskChange} placeholder=' Task' />
+				<input
+					type='text'
+					value={newCategory}
+					onChange={handleCategoryChange}
+					placeholder=' Category'
+					list='cats'
+				/>
 				<datalist id='cats'>
 					{currentCategories.map((category, i) => (
 						<Dropdown key={i} category={category.category} />
 					))}
 				</datalist>
-				<button type='submit'>save</button>
+				<input type="submit" value="save" />
+				{/* <button type='submit'>save</button> */}
 			</form>
-			<div class="right-side"> </div>
-        <div id="myProgress"><div id="myBar"></div></div>
-            
+			<div class='right-side'> </div>
+			<div id='myProgress'>
+				<div id='myBar'></div>
+			</div>
 		</div>
 	)
-/*
+	/*
 var i = 0;
 function move() {
   if (i == 0) {

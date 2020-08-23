@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
 
 const Task = ({ task, toggleFinished, deleteTask }) => {
-/*     const label = task.status
+	/*     const label = task.status
     ? 'finished' : 'not finished'
  */
-    return (
-        <div class = "tasks">
-            {/*<button onClick={toggleFinished}>{label}</button>*/}
 
-            <input type="checkbox" id="myCheck" onClick={toggleFinished}></input>
+	const checked = task.status ? 'true' : ""
+	return (
+		<div class='tasks'>
+			{/*<button onClick={toggleFinished}>{label}</button>*/}
 
-            {task.content}
-            <button onClick={deleteTask}>x</button>
-        </div>
-    );
-};
+			<input type='checkbox' checked={checked} id='myCheck' onClick={toggleFinished}></input>
 
+			{task.content}
+			<button onClick={deleteTask} >x</button>
+		</div>
+	)
+}
 
-export default Task;
+export default Task
