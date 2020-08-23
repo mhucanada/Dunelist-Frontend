@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Task from './components/Task'
+import ProgressBar from './components/ProgressBar'
 import Dropdown from './components/Dropdown'
 import taskService from './services/tasks'
 import categoryService from './services/category'
 
 const App = () => {
-	const [tasks, setTasks] = useState([])
+	const [tasks, setTasks] = useState([]) /*[varName, funcName] <- list of tasks*/
 	const [newTask, setNewTask] = useState('')
 	const [newCategory, setNewCategory] = useState('')
 	const [currentCategories, setCurrentCategories] = useState([])
@@ -26,6 +27,7 @@ const App = () => {
 	}, [])
 
 	const addTask = (event) => {
+
 		event.preventDefault()
 		const oneCategory = !newCategory.replace(/\s/g, '').length === true ? 'uncategorized' : newCategory
 
@@ -55,6 +57,7 @@ const App = () => {
 				setTasks(tasks.concat(returnedTask))
 				setNewTask('')
 				setNewCategory('')
+
 			})
 		}
 	}
@@ -85,8 +88,17 @@ const App = () => {
 		}
 	}
 
-	var date = new Date()
-	var displayDate = date.toDateString()
+	var date = new Date();
+	var displayDate = date.toDateString();
+    var tasksDone = 0;
+    tasks.map((item) => { /*map = do same thing to each item in list*/
+
+        if (item.status)
+        {
+            tasksDone += 1;
+        }
+        console.log(tasksDone);
+    })
 
 	return (
 		<div>
@@ -115,35 +127,18 @@ const App = () => {
 						<Dropdown key={i} category={category.category} />
 					))}
 				</datalist>
-				<input type="submit" value="save" />
+
+				<input type="submit" value="Add" />
 				{/* <button type='submit'>save</button> */}
 			</form>
-			<div class='right-side'> </div>
-			<div id='myProgress'>
-				<div id='myBar'></div>
-			</div>
+			<div className="right-side">
+                
+                <ProgressBar numberOfTasks={tasks.length} tasksDone={tasksDone} />
+            </div>
 		</div>
+			
 	)
-	/*
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
-  }
-}
-*/
+
 }
 
 export default App
