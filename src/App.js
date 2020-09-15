@@ -90,6 +90,7 @@ const App = () => {
 
 	var date = new Date();
 	var displayDate = date.toDateString();
+
     var tasksDone = 0;
     tasks.map((item) => { /*map = do same thing to each item in list*/
 
